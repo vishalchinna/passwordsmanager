@@ -1,0 +1,33 @@
+.list-box {
+  border: 1px solid #c3caea;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 220px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.one {
+  color: white;
+  background-color: #14b8a6;
+  border-radius: 40px;
+  padding: 10px 17px 10px 17px;
+}
+.det {
+  font-size: 10px;
+  color: white;
+  padding-top: 5px;
+}
+.dlt-btn {
+  background-color: transparent;
+  border-width: 0px;
+}
+.dlt-icon {
+  height: 16px;
+}
+.star {
+  height: 8px;
+}

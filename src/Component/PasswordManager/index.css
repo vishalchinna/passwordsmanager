@@ -1,0 +1,131 @@
+.bg-container {
+  background-color: #9ba9eb;
+  height: 100vh;
+  padding: 15px 150px 15px 50px;
+}
+.logo {
+  height: 40px;
+}
+.input-container {
+  background-color: #5763a5;
+  height: 40vh;
+  margin-top: 23px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 70px 20px 70px;
+  border-radius: 5px;
+}
+.password-container {
+  background-color: #5763a5;
+  height: 40vh;
+  margin-top: 12px;
+  border-radius: 5px;
+}
+.password-logo {
+  height: 230px;
+}
+.input-box {
+  background-color: #454f84;
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 8px;
+}
+.add-password {
+  font-size: 13px;
+  font-weight: 500;
+  color: #b6c3ca;
+  padding-bottom: 10px;
+  padding-top: 12px;
+}
+.website {
+  width: 250px;
+  font-size: 10px;
+  margin-bottom: 10px;
+  outline: none;
+  border-radius: 3px;
+  border-width: 0px;
+  display: flex;
+  padding-top: 9px;
+}
+.website-logo {
+  height: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.website-input {
+  background-color: white;
+  height: 32px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  align-self: flex-end;
+  font-size: 10px;
+  background-color: hsl(217, 100%, 52%);
+  color: white;
+  cursor: pointer;
+  border-width: 0px;
+  padding: 5px 18px 5px 18px;
+  border-radius: 4px;
+}
+.password-container {
+  padding: 0px 30px 15px 30px;
+}
+.password-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.password {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+  margin-top: 0px;
+}
+.website-search {
+  width: 200px;
+  font-size: 10px;
+  margin-bottom: 10px;
+  outline: none;
+  border-radius: 3px;
+  border-width: 0px;
+  display: flex;
+  padding-top: 9px;
+  height: 18px;
+}
+.sea {
+  height: 27px;
+}
+.count {
+  padding-left: 10px;
+  font-size: 10px;
+  color: white;
+}
+.checkBox {
+  color: white;
+  font-size: 10px;
+  font-weight: 500;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+}
+.no-ps {
+  height: 140px;
+}
+.no-pwd {
+  color: white;
+  font-size: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ul-list {
+  flex-wrap: wrap;
+  display: flex;
+}
