@@ -11,6 +11,7 @@ class PasswordManager extends Component {
     username: '',
     password: '',
     isChecked: true,
+    searchInput: '',
   }
 
   onchangeWebsite = event => {
@@ -29,18 +30,24 @@ class PasswordManager extends Component {
     event.preventDefault()
     const {website, username, password} = this.state
 
-    const newList = {
-      id: uuidv4(),
-      website,
-      username,
-      password,
+    if (website !== '' && username !== '' && password !== '') {
+      const newList = {
+        id: uuidv4(),
+        website,
+        username,
+        password,
+      }
+      this.setState(prev => ({
+        passwordList: [...prev.passwordList, newList],
+        website: '',
+        username: '',
+        password: '',
+      }))
     }
-    this.setState(prev => ({
-      passwordList: [...prev.passwordList, newList],
-      website: '',
-      username: '',
-      password: '',
-    }))
+  }
+
+  onChangeFilterPasswords = event => {
+    this.setState({searchInput: event.target.value})
   }
 
   checkToggle = () => {
@@ -55,9 +62,21 @@ class PasswordManager extends Component {
   }
 
   render() {
-    const {passwordList, isChecked, website, username, password} = this.state
-    const lnt = passwordList.length
+    const {
+      passwordList,
+      isChecked,
+      website,
+      username,
+      password,
+      searchInput,
+    } = this.state
+
     console.log(passwordList)
+
+    const finalPasswordsList = passwordList.filter(each =>
+      each.website.includes(searchInput),
+    )
+    const lnt = finalPasswordsList.length
 
     return (
       <div className="bg-container">
@@ -86,7 +105,7 @@ class PasswordManager extends Component {
             <div className="website-input">
               <img
                 src="https://assets.ccbp.in/frontend/react-js/password-manager-username-img.png"
-                alt="website"
+                alt="username"
                 className="website-logo"
               />
               <input
@@ -139,6 +158,7 @@ class PasswordManager extends Component {
                 type="search"
                 className="website-search"
                 placeholder="search"
+                onChange={this.onChangeFilterPasswords}
               />
             </div>
           </div>
@@ -159,7 +179,7 @@ class PasswordManager extends Component {
             </div>
           ) : (
             <ul className="ul-list">
-              {passwordList.map(each => (
+              {finalPasswordsList.map(each => (
                 <PasswordList
                   key={each.id}
                   deleteList={this.deleteList}

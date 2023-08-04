@@ -17,14 +17,14 @@ const PasswordList = prop => {
         {isChecked ? (
           <img
             src="https://assets.ccbp.in/frontend/react-js/password-manager-stars-img.png "
-            alt="starts"
+            alt="stars"
             className="star"
           />
         ) : (
           <p className="det">{password}</p>
         )}
       </div>
-      <button type="button" data-testid="button" className="dlt-btn">
+      <button type="button" data-testid="delete" className="dlt-btn">
         <img
           src="https://assets.ccbp.in/frontend/react-js/password-manager-delete-img.png"
           alt="delete"
